@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Bootstrap demo</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary" id="header">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="#">Test-Shop<img class="company-logo" src="img/icons/car-on-solid.svg"
+               alt="logo"></a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <!--top menu with drop down-->
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
+               <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#carouselExampleIndicators">Mid</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                     aria-expanded="false">
+                     For More
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="https://edmag19.github.io/CV/">Check My CV</a></li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li><a class="dropdown-item" href="#contact-me">Contact with Me</a></li>
+                  </ul>
+               </li>
+            </ul>
+            <!--element with login dropdown-->
+            <div class="dropdown ms-auto">
+               <a class="btn-secondar my-shopping" href="#"><img src="img/icons/circle-exclamation-solid.svg"
+                     alt="shop"></a>
+               <a class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" href="">
+                  <img class="icon-user" src="img/icons/user-solid.svg" alt="user">
+               </a>
+               <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Log In</a></li>
+                  <li><a class="dropdown-item" href="#">Log Out</a></li>
+               </ul>
+               <a class="btn-secondar my-shopping" href="#" data-bs-toggle="modal" data-bs-target="#modal-cart"><img
+                     src="img/icons/cart-shopping-solid.svg" alt="shop"></a>
+
+               <!--modal window-->
+               <div class="modal fade modal-sm modal-lg" id="modal-cart" tabindex="-1"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-header bg-info text-dark">
+                           <h1 class="modal-title fs-5" id="exampleModalLabel">Your bought items</h1>
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           <table class="table">
+                              <thead>
+                                 <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col"></th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <th scope="row">1</th>
+                                    <td><a href="">Tesla Cyber Truck</a></td>
+                                    <td>100,000 $</td>
+                                    <td><img src="img/rtv/1617826997_tesla-cybertruck-prototype.jpg" alt=""></td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">2</th>
+                                    <td><a href="">Tesla Model S Concept</a></td>
+                                    <td>150,000 $</td>
+                                    <td><img src="img/rtv/andrew-w-fVt15CMcSNA-unsplash.jpg" alt=""></td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">3</th>
+                                    <td><a href="">Tesla Model X</a></td>
+                                    <td>120,000 $</td>
+                                    <td><img src="img/rtv/Tesla-Model-X-Computer-Backgrounds.jpg" alt=""></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Buy More</button>
+                           <button type="button" class="btn btn-primary me-1">Buy Chosen</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--search form-->
+            <form class="d-flex search-form" role="search">
+               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+               <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+         </div>
+      </div>
+   </nav>
+   <main class="main-content">
+      <!--Cards-->
+      <section class="section-content-1" id="t-cards">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <a href=""><img src="img/hero-image.webp" alt=""></a>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <a href=""><img src="img/hero-image.webp" alt=""></a>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <a href=""><img src="img/hero-image.webp" alt=""></a>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <a href=""><img src="img/hero-image.webp" alt=""></a>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--Carousel-->
+      <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
+         data-bs-interval="3000">
+         <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+               aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+               aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+               aria-label="Slide 3"></button>
+         </div>
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="img/1946375.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+               <img src="img/486533.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+               <img src="img/486567.png" class="d-block w-100" alt="...">
+            </div>
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+         </button>
+      </div>
+
+      <!--Cards-->
+      <section class="section-content-2" id="b-cards">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title">Tesla steering wheel</h5>
+                        <a href=""><img
+                              src="https://www.slashgear.com/img/gallery/tesla-model-3-refresh-details-leak-what-we-know-about-project-highland/l-intro-1669653266.jpg"
+                              alt=""></a>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="product-action d-flex justify-content-between">
+                           <div class="product-prices">
+                              <h5 class="price">Price: From <span>1,000 $</span></h5>
+                           </div>
+                           <div class="product-links"><a href="#" class="button-like"><img class="button-shopping"
+                                    src="img/icons/heart.svg" alt="heart"></a>
+                              <a href="#" class="button-like"><img class="button-shopping"
+                                    src="img/icons/basket-shopping.svg" alt="basket"></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title">Custom Wheels</h5>
+                        <a href=""><img
+                              src="https://s1.cdn.autoevolution.com/images/news/tesla-details-model-3-shipping-priority-for-existing-customers-105776_1.jpg"
+                              alt=""></a>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="product-action d-flex justify-content-between">
+                           <div class="product-prices">
+                              <h5 class="price">Price: From <span>1,500 $</span></h5>
+                           </div>
+                           <div class="product-links"><a href="#" class="button-like"><img class="button-shopping"
+                                    src="img/icons/heart.svg" alt="heart"></a>
+                              <a href="#" class="button-like"><img class="button-shopping"
+                                    src="img/icons/basket-shopping.svg" alt="basket"></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title">Tesla Body Styling</h5>
+                        <a href=""><img
+                              src="https://electrek.co/wp-content/uploads/sites/3/2016/03/screen-shot-2016-03-08-at-10-27-46-am.png"
+                              alt=""></a>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="product-action d-flex justify-content-between">
+                           <div class="product-prices">
+                              <h5 class="price">Price: From <span>2,000 $</span></h5>
+                           </div>
+                           <div class="product-links"><a href="#" class="button-like"><img class="button-shopping"
+                                    src="img/icons/heart.svg" alt="heart"></a>
+                              <a href="#" class="button-like"><img class="button-shopping"
+                                    src="img/icons/basket-shopping.svg" alt="basket"></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title">Chargeres</h5>
+                        <a href=""><img
+                              src="https://maycointernational.com/wp-content/uploads/2021/09/Vehicle-with-an-electric-motor.jpg"
+                              alt=""></a>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, est.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="product-action d-flex justify-content-between">
+                           <div class="product-prices">
+                              <h5 class="price">Price: From <span>6,000 $</span></h5>
+                           </div>
+                           <div class="product-links"><a href="#" class="button-like"><img class="button-shopping"
+                                    src="img/icons/heart.svg" alt="heart"></a>
+                              <a href="#" class="button-like"><img class="button-shopping"
+                                    src="img/icons/basket-shopping.svg" alt="basket"></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--Footer-->
+   <footer>
+      <section class="footer">
+         <div class="container-fluid">
+            <div class="row">
+               <!--Left part of footer-->
+               <div class="col-md-4 col-sm-12 footer-left">
+                  <a href="#header">Test Shop<img class="company-logo" src="img/icons/car-on-solid.svg" alt="logo"></a>
+                  <ul class="list-group list-group-horizontal list-unstyled">
+                     <li><a href="#header">Header</a></li>
+                     <li><a href="#t-cards">T-Cards</a></li>
+                     <li><a href="#carouselExampleIndicators">Carousel</a></li>
+                     <li><a href="#b-cards">B-Cards</a></li>
+                  </ul>
+                  <p>Some company name © 2023</p>
+               </div>
+               <!--Central part of footer-->
+               <div class="col-md-4 col-12 footer-center">
+                  <div class="footer-location">
+                     <img src="img/icons/compass-solid.svg" alt="location">
+                     <p>Warsaw, Poland</p>
+                  </div>
+                  <div class="footer-phone"><img src="img/icons/phone-solid.svg" alt="phone">
+                     <p><a href="tel:+48792713482">+48-792-713-482</a></p>
+                  </div>
+                  <div class="footer-mail"><img src="img/icons/envelope-solid.svg" alt="mail">
+                     <p><a href="mailto:gmail">hereliuk.yaroslav@gmail.com</a></p>
+                  </div>
+               </div>
+               <!--Right part of footer-->
+               <div class="col-md-4 col-12 footer-right" id="contact-me">
+                  <h6>Here we have some small information about our company for persons interested in it:)</h6>
+                  <div class="footer-links">
+                     <ul class="footer-links__list">
+                        <li><a href="https://www.instagram.com/gereliuk/"><img src="img/icons/instagram-fill.svg"
+                                 alt="instagram"></a></li>
+                        <li><a href="https://www.linkedin.com/in/yaroslav-hereliuk-721661257/"><img
+                                 src="img/icons/linkedin-box-fill.svg" alt="linkedin"></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100000989957042"><img
+                                 src="img/icons/facebook-box-fill.svg" alt="facebook" /></a></li>
+                        <li><a href="https://github.com/EdMAg19"><img src="img/icons/github.svg" alt="GitHub"></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </footer>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

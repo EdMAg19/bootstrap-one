@@ -1,0 +1,380 @@
+body {
+   position: relative;
+   font-size: 16px;
+   font-family: 'Roboto Mono', monospace;
+   font-weight: 400;
+   color: black;
+   min-width: 320px;
+   min-height: 1000px;
+   scroll-behavior: smooth;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+section {
+   padding: 50px 0;
+}
+
+a {
+   color: #111;
+}
+
+a:hover {
+   color: #333;
+}
+
+.navbar {
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 999;
+}
+
+.navbar-brand {
+   margin-left: 10px;
+   color: cadetblue;
+   transition: all .25s;
+}
+
+.navbar-brand .company-logo {
+   width: 1em;
+   height: 1em;
+   margin-left: 5px;
+}
+
+li.nav-item{
+   font-weight: 500;
+   text-transform: uppercase;
+}
+
+.top-menu li a, .dropdown-menu li a{
+   color:  #111;
+}
+
+.top-menu li a:hover, .dropdown-menu li a:hover {
+   color:  #999;
+   background-color: transparent;
+}
+
+.top-menu li::after, .dropdown-menu li::after {
+   content: '';
+   display: block;
+   width: 100%;
+   background-color: #9f9f9f;
+   height: 1.5px;
+   transition: all 0.4s;
+   transform: scale(0);
+}
+
+.top-menu li:hover:after, .dropdown-menu li:hover:after {
+   transform: scale(1);
+   margin-left: 0;
+}
+
+.dropdown-menu {
+   /*-webkit-box-shadow: inset 0px 0px 18px -7px rgba(66, 68, 90, 1);
+   -moz-box-shadow: inset 0px 0px 18px -7px rgba(66, 68, 90, 1);
+   */
+   box-shadow: inset 0px 0px 18px -7px rgba(66, 68, 90, 1);
+   text-align: center;
+   position: absolute;
+   z-index: 10;
+}
+
+.search-form {
+   margin-top: 15px;
+   width: 250px;
+}
+
+.dropdown {
+   padding-right: 10px;
+}
+
+.dropdown a {
+   background-color: transparent;
+   border-style: none;
+}
+
+.dropdown a:nth-child(2):hover {
+   background-color: #999;
+}
+
+.dropdown img {
+   width: 15px;
+   height: 15px;
+}
+
+.my-shopping {
+   max-width: 20px;
+   height: auto;
+}
+
+.dropdown-toggle::after {
+   display: none;
+}
+
+.icon-user {
+   margin-bottom: 10%;
+}
+
+.modal>*,
+button {
+   text-transform: uppercase;
+}
+
+.table img {
+   width: 100px;
+   height: auto;
+}
+
+.main-content {
+   height: auto;
+   margin: 20px 0 0;
+   padding: 0 0px;
+}
+
+.row {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.col-sm-12 {
+   margin: 20px auto;
+}
+
+.btn-primary {
+   display: block;
+   margin: 0 auto;
+   width: 50%;
+}
+
+.carousel {
+   width: 100%;
+   padding: 0;
+}
+
+/*bottom cards*/
+
+.section-content-2 .col-lg-6 img {
+   width: 100%;
+   height: 350px;
+   overflow: hidden;
+   object-fit: cover;
+   transition: all ease-out .3s;
+   transform: scale(1);
+}
+
+.section-content-2 .col-lg-6 img:hover  {
+   transform: scale(.99);
+   overflow: hidden;
+}
+
+.product-action {
+   width: 100%;
+   text-align: center;
+   margin-top: 20px;
+}
+
+.section-content-2 .col-lg-6 .button-like img {
+   width: 20px;
+   height: 20px;
+}
+
+.card-body {
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+   transition: all .3s;
+}
+
+.card-body:hover {
+   box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
+}
+
+.card-body p {
+   display: block;
+   height: 50px;
+   overflow: hidden;
+   margin-top: 15px;
+}
+
+.product-prices h5 span {
+   color: red;
+}
+
+.product-action {
+   border-top: 1px solid #d8c6c693;
+   overflow: hidden;
+   padding-top: 10px;
+}
+
+/* footer */
+
+.footer {
+   margin: 0 auto;
+   width: 100%;
+   min-height: 50vh;
+   background: #333;
+   font-size: 16px;
+   font-weight: normal;
+   text-align: center;
+   color: #999;
+}
+
+.footer .row {
+   margin: 0 auto;
+}
+
+.footer img {
+   width: 30px;
+   height: 30px;
+}
+.footer-left, .footer-center, .footer-right {
+   margin-bottom: 20px;
+}
+
+.footer-left a, .company-logo {
+   font-size: 16px;
+   text-transform: uppercase;
+   display: inline-block;
+}
+
+.row .footer-left > a{
+   color: cadetblue;
+   margin: 0 auto;
+   text-decoration: none;
+}
+
+.footer-left ul li {
+   display: inline-block; 
+   font-size: 12px; 
+   margin: 0 auto;
+}
+
+footer .footer-left .company-logo {
+   width: 1rem;
+   height: 1rem;
+   margin-left: 5px;
+}
+
+.footer-left ul {
+   display: flex;
+   width: 100%;
+   height: auto;
+   flex-wrap: wrap;
+   gap: 15px;
+   margin: 15px auto;
+}
+
+.footer-left li a {
+   text-decoration: none;
+   color: #999;
+   margin: 0 auto;
+}
+
+.footer-left li a:hover, .footer-left a:hover {
+   color:  aliceblue;
+   transition: all .3s;
+}
+
+.footer-left li a::after, .footer-left a::after {
+   content: '';
+   display: block;
+   width: auto;
+   height: 1px;
+   text-decoration: none;
+   transition: all .3s;
+   transform: scale(0);   
+}
+
+.footer-left li a:hover::after, .footer-left a:hover::after {
+
+   background-color:  aliceblue;
+   transform: scale(1);
+}
+
+.footer-center {
+   display: inline-block;
+   margin: 20px auto;
+   box-sizing: border-box;
+   font-size: 12px;
+   text-align: center;
+}
+
+.footer-center img {
+   margin-bottom: 10px;
+   object-fit: cover;
+}
+.footer-center a {
+   font-size: 12px;
+   text-decoration: none;
+   color: #999;
+   display: inline-block;
+   width: fit-content;
+}
+
+.footer-center a:hover {
+   color: aliceblue;
+   transition: all .3s;
+}
+
+.footer-center a::after {
+   content: '';
+   display: block;
+   width: auto;
+   height: 1px;
+   text-decoration: none;
+   transition: all .3s;
+   transform: scale(0);
+}
+
+.footer-center a:hover::after {
+   transform: scale(1);
+   background-color: aliceblue;
+}
+
+.footer-links {
+   width: 100%;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+}
+
+.footer-links__list {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   list-style: none;
+   padding: 0;
+   gap: 15px;
+   margin: 0 auto;
+}
+
+.footer-right .footer-links a {
+   width: 30px;
+   height: 30px;
+   display: block; 
+   text-align: center;
+}
+
+.footer-links img {
+   display: block;
+   width:30px;
+   height: 30px;
+   transition: all .3s;
+}
+
+.footer-links img:hover {
+   opacity: 0.5;
+   transition: .3s;
+}
+
+.footer-right h6 {
+   margin: 20px 15px 0;
+   font-weight: normal;
+   text-align: justify;
+}
